@@ -1,0 +1,20 @@
+{
+  "name": "school-device-ledger",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run css && vite",
+    "css": "node --input-type=module -e \"import {writeFileSync} from 'node:fs'; writeFileSync('public/tailwind.css', '@import \\\"tailwindcss\\\";')\" && tailwindcss -i ./public/tailwind.css -o ./public/styles.css --minify",
+    "build": "npm run css && vite build"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}
